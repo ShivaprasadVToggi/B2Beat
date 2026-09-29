@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   VYAPARPOOL 2.0 — Design System
+   Institutional fintech / commerce infrastructure aesthetic
+   ============================================================ */
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #FAF9F7;
+  --bg-secondary: #F4F2EF;
+  --bg-dark: #0F1115;
+  --bg-darker: #0A0B0E;
+  --bg-card: #FFFFFF;
+
+  /* Text */
+  --text-primary: #0F1115;
+  --text-secondary: #4A4F58;
+  --text-tertiary: #7A7F88;
+  --text-inverse: #FAF9F7;
+  --text-inverse-secondary: #A0A4AB;
+
+  /* Brand - restrained earthy saffron */
+  --brand-primary: #B8860B;
+  --brand-secondary: #D4A843;
+  --brand-muted: #E8D5A3;
+
+  /* Borders */
+  --border-light: #E5E3DF;
+  --border-medium: #D1CEC8;
+  --border-dark: #2A2D33;
+
+  /* Status */
+  --status-positive: #2E7D5F;
+  --status-warning: #B8860B;
+  --status-critical: #A33A2E;
+  --status-info: #3A5A8C;
+}
+
+/* Base styles */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--brand-muted);
+    color: var(--text-primary);
+  }
+}
+
+@layer utilities {
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-medium);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
+  }
+
+  /* Typography */
+  .font-display {
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+
+  .eyebrow-inverse {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-inverse-secondary);
+  }
+
+  /* Grid backgrounds */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(15, 17, 21, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 17, 21, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(250, 249, 247, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(250, 249, 247, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-grid-fine {
+    background-image:
+      linear-gradient(to right, rgba(15, 17, 21, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 17, 21, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Animations */
+  @keyframes flowDash {
+    to { stroke-dashoffset: -20; }
+  }
+
+  @keyframes truckMove {
+    0% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(-10px); }
+  }
+
+  .flow-line {
+    stroke-dasharray: 4 4;
+    animation: flowDash 1.5s linear infinite;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* Stagger children */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .stagger-children.is-visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(7) { transition-delay: 0.65s; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(8) { transition-delay: 0.75s; opacity: 1; transform: translateY(0); }
+
+  /* Card hover */
+  .card-hover {
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    border-color: var(--border-medium);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(15, 17, 21, 0.06);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.15s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background: #1a1d24;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--text-tertiary);
+    background: var(--bg-secondary);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-ghost:hover {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+  }
+
+  .btn-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--brand-primary);
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.15s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-brand:hover {
+    background: #9a6f09;
+    transform: translateY(-1px);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .stagger-children > * {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+
+  .container-page {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-page {
+      padding: 0 2rem;
+    }
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding: 8rem 0;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border-light);
+  }
+
+  .divider-dark {
+    height: 1px;
+    background: var(--border-dark);
+  }
+}
