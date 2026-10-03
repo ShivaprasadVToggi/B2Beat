@@ -15,17 +15,17 @@ const benefits = [
   {
     icon: <Layers size={24} />,
     title: 'Demand aggregation',
-    desc: 'Receive one consolidated order per cluster instead of many fragmented small orders.',
+    desc: 'Receive aggregated purchase orders for scheduled routes instead of many fragmented small orders.',
   },
   {
     icon: <Truck size={24} />,
     title: 'Higher truck utilization',
-    desc: 'One 3-tonne truck, one drop. Route economics transform from marginal to efficient.',
+    desc: 'Doorstep deliveries on scheduled beats with verified OTPs. Route economics transform from marginal to efficient.',
   },
   {
     icon: <MapPin size={24} />,
     title: 'Lower route fragmentation',
-    desc: 'Instead of 20+ stops across scattered villages, you serve one cluster hub per route.',
+    desc: 'Instead of scattered logistics, you serve scheduled kirana doorstep drops with zero hassle.',
   },
   {
     icon: <Wallet size={24} />,
@@ -58,7 +58,7 @@ export default function DistributorsPage() {
               <span className="text-text-secondary">into efficient routes.</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-              VyaparPool aggregates merchant demand at the cluster level,
+              VyaparPool aggregates merchant demand at the scheduled beat level,
               giving you predictable volume, high truck utilization, and
               cleaner payment economics — without the cost of building rural reach yourself.
             </p>
@@ -115,10 +115,10 @@ export default function DistributorsPage() {
             </div>
             <div className="p-7 rounded-xl border border-brand-primary/30 bg-brand-muted/5">
               <div className="text-[0.7rem] uppercase tracking-wider text-brand-primary mb-2">VyaparPool Route</div>
-              <h3 className="text-xl font-semibold text-text-primary mb-5">One consolidated drop</h3>
+              <h3 className="text-xl font-semibold text-text-primary mb-5">Scheduled beat deliveries</h3>
               <div className="space-y-3 text-sm">
                 {[
-                  ['Merchant stops', '1 consolidated drop'],
+                  ['Merchant stops', 'Scheduled Doorstep Beats'],
                   ['Truck utilization', '85–95%'],
                   ['Payment', 'NBFC-funded, faster'],
                   ['Demand certainty', 'Binding commitments'],

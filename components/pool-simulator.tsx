@@ -58,14 +58,14 @@ export default function PoolSimulator({
 
   // Anonymized merchants
   const merchants = [
-    { id: 'M01', qty: 180, anonymous: 'Merchant 01' },
-    { id: 'M02', qty: 240, anonymous: 'Merchant 02' },
-    { id: 'M03', qty: 150, anonymous: 'Merchant 03' },
-    { id: 'M04', qty: 320, anonymous: 'Merchant 04' },
-    { id: 'M05', qty: 210, anonymous: 'Merchant 05' },
-    { id: 'M06', qty: 120, anonymous: 'Merchant 06' },
-    { id: 'M07', qty: 280, anonymous: 'Merchant 07' },
-    { id: 'M08', qty: 80, anonymous: 'Merchant 08' },
+    { id: 'M01', qty: 180, anonymous: 'Store #42' },
+    { id: 'M02', qty: 240, anonymous: 'Store #11' },
+    { id: 'M03', qty: 150, anonymous: 'Store #89' },
+    { id: 'M04', qty: 320, anonymous: 'Store #23' },
+    { id: 'M05', qty: 210, anonymous: 'Store #56' },
+    { id: 'M06', qty: 120, anonymous: 'Store #78' },
+    { id: 'M07', qty: 280, anonymous: 'Store #34' },
+    { id: 'M08', qty: 80, anonymous: 'Store #91' },
     { id: 'YOU', qty: userCommitment, anonymous: 'Your Commitment', isYou: true },
   ];
 
@@ -85,8 +85,8 @@ export default function PoolSimulator({
             <h3 className="text-xl font-semibold text-text-primary">{skuName}</h3>
           </div>
           <div className="text-right">
-            <div className="text-[0.7rem] text-text-tertiary uppercase tracking-wider">Cutoff</div>
-            <div className="text-[0.85rem] font-medium text-text-primary tabular">Oct 02</div>
+            <div className="text-[0.7rem] text-text-tertiary uppercase tracking-wider">Cutoff Countdown</div>
+            <div className="text-[0.85rem] font-medium text-brand-primary tabular">48:00:00</div>
           </div>
         </div>
 
@@ -180,8 +180,8 @@ export default function PoolSimulator({
                 <div className="font-semibold text-text-primary tabular">₹{effectivePrice.toFixed(0)}/kg</div>
               </div>
               <div>
-                <div className="text-[0.7rem] text-text-tertiary uppercase">Truck Allocated</div>
-                <div className="font-semibold text-text-primary">3-ton Mini</div>
+                <div className="text-[0.7rem] text-text-tertiary uppercase">Delivery</div>
+                <div className="font-semibold text-text-primary">Shop Doorstep</div>
               </div>
               <div>
                 <div className="text-[0.7rem] text-text-tertiary uppercase">Financing</div>

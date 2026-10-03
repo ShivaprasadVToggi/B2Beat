@@ -44,18 +44,17 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center reveal">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-secondary border border-border-light text-[0.75rem] text-text-secondary mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
-              VyaparPool 2.0 · Commerce Infrastructure
+              VyaparPool 3.0 · Commerce Infrastructure
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-primary mb-6 leading-[1.02]">
-              Turn fragmented retail demand
+              Zero-Asset Virtual Beat Pooling
               <br />
-              <span className="text-text-secondary">into purchasing power.</span>
+              <span className="text-text-secondary">+ Working Capital.</span>
             </h1>
 
             <p className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-              VyaparPool helps rural retailers combine demand, unlock distributor pricing,
-              receive consolidated delivery, and finance inventory against real business cash flow.
+              Unlock 2.5% Cash Discounts and 14-day working capital on your distributor's scheduled beat—delivered directly to your shop door.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -104,11 +103,11 @@ export default function HomePage() {
       <section className="section" id="why">
         <div className="container-page">
           <div className="max-w-3xl mb-16 reveal">
-            <p className="eyebrow mb-4">The Problem</p>
+            <p className="eyebrow mb-4">Core Pillars</p>
             <h2 className="font-display text-3xl md:text-5xl text-text-primary mb-6">
-              Rural retail already has demand.
+              Everything you need.
               <br />
-              <span className="text-text-secondary">It just doesn't have coordination.</span>
+              <span className="text-text-secondary">Nothing you don't.</span>
             </h2>
           </div>
 
@@ -116,27 +115,27 @@ export default function HomePage() {
             {[
               {
                 num: '01',
-                title: 'Fragmented Purchasing',
-                desc: '10–25 kg/day per small retailer. Too small for meaningful wholesale leverage. Each merchant negotiates alone.',
+                title: 'Route Pools',
+                desc: 'Anonymous demand pooling on scheduled beats with anti-monopoly caps.',
                 icon: <Store size={20} />,
-                data: '10–25 kg/day',
-                dataLabel: 'per retailer',
+                data: '35%',
+                dataLabel: 'max merchant cap',
               },
               {
                 num: '02',
-                title: 'Working-Capital Constraints',
-                desc: 'Inventory ties up scarce capital. Limited stock means lost sales. No credit history to unlock larger facilities.',
+                title: 'T+0 NBFC Disbursal',
+                desc: 'Closed-loop supplier financing; distributor gets paid upfront, retailer gets 14-day credit.',
                 icon: <Wallet size={20} />,
-                data: '60%+',
-                dataLabel: 'capital in inventory',
+                data: 'T+0',
+                dataLabel: 'distributor settlement',
               },
               {
                 num: '03',
-                title: 'Unreliable Last-Mile Economics',
-                desc: 'Multiple small stops. Partial truckloads. Distributors avoid thin rural routes or pass on the cost.',
+                title: 'Dual-Rail Auto-Repayment',
+                desc: 'Stress-free repayment via daily counter UPI sweeps + Day 14 AutoPay floor.',
                 icon: <Truck size={20} />,
-                data: '< 40%',
-                dataLabel: 'typical truck utilization',
+                data: 'Day 14',
+                dataLabel: 'AutoPay trigger',
               },
             ].map((item) => (
               <div
@@ -226,19 +225,19 @@ export default function HomePage() {
                 <div className="w-11 h-11 rounded-lg bg-brand-muted/20 flex items-center justify-center text-brand-primary mb-5">
                   <Layers size={22} />
                 </div>
-                <h3 className="text-2xl font-semibold text-text-primary mb-3">Demand Pooling</h3>
+                <h3 className="text-2xl font-semibold text-text-primary mb-3">Virtual Beat Pool (Anonymous & Scheduled)</h3>
                 <p className="text-[0.9rem] text-text-secondary leading-relaxed mb-6">
-                  Merchants within a 15 km cluster anonymously commit to SKUs.
-                  As commitments accumulate, the pool crosses progressive pricing tiers.
+                  Pools are tied to a scheduled Distributor Beat (e.g., "Highway Route Beat — Delivery on Tuesday/Friday").
+                  Show a 48-Hour Cut-off Countdown before the distributor's mini-truck run.
                 </p>
                 <ul className="space-y-2.5 text-sm text-text-secondary">
                   {[
-                    'Cluster creation and SKU selection',
-                    'Live anonymous commitments',
-                    'Progressive pricing tiers',
-                    '30–35% merchant share cap',
-                    'Binding commitment · Pool cutoff',
-                    'Distributor confirmation',
+                    '40% Pool Filled = 1.5% off',
+                    '70% Pool Filled = 2.5% off',
+                    '100% Pool Filled = 3.5% total off',
+                    'Anti-Monopoly: 35% hard cap per kirana',
+                    'Anonymous peer commitments',
+                    'Competitors blind to exact shop names',
                   ].map((f) => (
                     <li key={f} className="flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-brand-primary" />
@@ -302,9 +301,9 @@ export default function HomePage() {
                     <div className="absolute left-[7px] top-2 w-px h-1/2 bg-brand-primary" />
 
                     {[
-                      { label: 'In transit', status: 'active', icon: <Truck size={14} /> },
-                      { label: 'Cluster hub · OTP verification', status: 'pending', icon: <Lock size={14} /> },
-                      { label: 'Sealed merchant crates', status: 'pending', icon: <Package size={14} /> },
+                      { label: 'Shop Doorstep Delivery', status: 'active', icon: <Truck size={14} /> },
+                      { label: '4-Digit Counter OTP verification', status: 'pending', icon: <Lock size={14} /> },
+                      { label: 'T+0 NBFC Disbursal to Distributor', status: 'pending', icon: <Wallet size={14} /> },
                     ].map((step, i) => (
                       <div key={i} className="relative flex items-center gap-3">
                         <div
@@ -350,20 +349,19 @@ export default function HomePage() {
                 <div className="w-11 h-11 rounded-lg bg-brand-muted/20 flex items-center justify-center text-brand-primary mb-5">
                   <Truck size={22} />
                 </div>
-                <h3 className="text-2xl font-semibold text-text-primary mb-3">Zero-Warehouse Delivery</h3>
+                <h3 className="text-2xl font-semibold text-text-primary mb-3">Doorstep Commitment & Closed-Loop Credit</h3>
                 <p className="text-[0.9rem] text-text-secondary leading-relaxed mb-6">
-                  One consolidated truck from distributor to cluster hub.
-                  Sealed merchant crates. OTP-verified custody transfer.
-                  No intermediate warehouse. No shared pallets.
+                  Shop Doorstep Delivery via Scheduled Distributor Beat Truck.
+                  100% invoice value disbursed directly to Distributor's bank account. ₹0 cash disbursed to store.
                 </p>
                 <ul className="space-y-2.5 text-sm text-text-secondary">
                   {[
-                    '3-ton mini truck per cluster',
-                    'Single drop at cluster hub',
-                    'Sealed per-merchant crates',
-                    'OTP custody verification',
-                    'Transit insurance included',
-                    'Claims window per consignment',
+                    'Scheduled distributor beat truck',
+                    'Shop doorstep delivery',
+                    'T+0 NBFC Closed-Loop Disbursal',
+                    '100% invoice value to distributor',
+                    '₹0 cash disbursed to store',
+                    '14-Day working-capital cycle',
                   ].map((f) => (
                     <li key={f} className="flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-brand-primary" />
@@ -384,19 +382,19 @@ export default function HomePage() {
                 <div className="w-11 h-11 rounded-lg bg-brand-muted/20 flex items-center justify-center text-brand-primary mb-5">
                   <CreditCard size={22} />
                 </div>
-                <h3 className="text-2xl font-semibold text-text-primary mb-3">Embedded Inventory Credit</h3>
+                <h3 className="text-2xl font-semibold text-text-primary mb-3">Distributor Doorstep 4-Digit Counter OTP</h3>
                 <p className="text-[0.9rem] text-text-secondary leading-relaxed mb-6">
-                  Each fulfilled order becomes a short-duration inventory facility
-                  from a regulated NBFC partner. Repaid through the merchant's actual digital sales flow.
+                  Inspect goods at your shop counter and share this OTP with the distributor's delivery driver to confirm legal custody transfer.
+                  Repayment via daily QR micro-sweeps and AutoPay mandate safety floor.
                 </p>
                 <ul className="space-y-2.5 text-sm text-text-secondary">
                   {[
-                    'Order-backed financing',
-                    'NBFC partner as regulated lender',
-                    'Revenue-linked digital settlement sweep',
-                    '14-day UPI AutoPay floor mandate',
-                    'Account Aggregator cash-flow signals',
-                    'Credit history builds with each cycle',
+                    'Secure 4-Digit Counter OTP',
+                    'Confirm legal custody transfer',
+                    'Daily QR Micro-Sweeps (15%–20%)',
+                    'Pay down NBFC principal daily',
+                    'Day-14 UPI AutoPay trigger date',
+                    'Covers any remaining unpaid balance',
                   ].map((f) => (
                     <li key={f} className="flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-brand-primary" />
@@ -408,11 +406,11 @@ export default function HomePage() {
               <div className="lg:col-span-7 p-6 md:p-8 bg-bg-secondary/40">
                 <div className="grid grid-cols-5 gap-2 items-center">
                   {[
-                    { label: 'Merchant Order', val: '₹25,000', icon: <Store size={14} /> },
-                    { label: 'NBFC Financing', val: '₹25,000', icon: <Building2 size={14} /> },
-                    { label: 'Distributor Paid', val: '₹25,000', icon: <Wallet size={14} /> },
-                    { label: 'Daily Sales', val: 'Sweep', icon: <Zap size={14} /> },
-                    { label: 'Repaid', val: '14 days', icon: <Check size={14} /> },
+                    { label: 'Doorstep OTP', val: 'Verified', icon: <Store size={14} /> },
+                    { label: 'NBFC Financing', val: 'T+0', icon: <Building2 size={14} /> },
+                    { label: 'Distributor Paid', val: '100%', icon: <Wallet size={14} /> },
+                    { label: 'Daily QR Sweep', val: '15-20%', icon: <Zap size={14} /> },
+                    { label: 'AutoPay Floor', val: 'Day 14', icon: <Check size={14} /> },
                   ].map((step, i) => (
                     <React.Fragment key={i}>
                       <div className="text-center p-3 rounded-lg bg-bg-card border border-border-light">

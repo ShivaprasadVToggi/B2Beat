@@ -1,10 +1,10 @@
 import React from 'react';
-import { Truck, Users, Layers, Wallet, MapPin, Dot } from './icons';
+import { Truck, Users, Layers, Wallet, MapPin, Dot, Lock } from './icons';
 
-const clusterData = [
-  { name: 'Mandya East', demand: '2.6 tonnes', truck: '87%', merchants: 17, settlement: '₹2,84,500', delivery: 'Tomorrow · 08:30' },
-  { name: 'Mysore Rural', demand: '1.8 tonnes', truck: '72%', merchants: 12, settlement: '₹1,92,800', delivery: 'Oct 03 · 09:00' },
-  { name: 'Hassan South', demand: '3.1 tonnes', truck: '94%', merchants: 21, settlement: '₹3,41,200', delivery: 'Tomorrow · 11:00' },
+const beatData = [
+  { name: 'Mandya East Beat - Tue/Fri', demand: '2.6 tonnes', truck: '87%', merchants: 17, settlement: '₹2,84,500', delivery: 'Tomorrow · 08:30' },
+  { name: 'Mysore Rural Beat - Mon/Thu', demand: '1.8 tonnes', truck: '72%', merchants: 12, settlement: '₹1,92,800', delivery: 'Oct 03 · 09:00' },
+  { name: 'Hassan South Beat - Wed/Sat', demand: '3.1 tonnes', truck: '94%', merchants: 21, settlement: '₹3,41,200', delivery: 'Tomorrow · 11:00' },
 ];
 
 export default function DistributorDashboard() {
@@ -27,10 +27,10 @@ export default function DistributorDashboard() {
       {/* KPIs */}
       <div className="grid grid-cols-4 gap-px bg-border-light">
         {[
-          { label: 'Active Clusters', value: '4', icon: <MapPin size={14} />, sub: '+1 this week' },
-          { label: 'Pool Demand', value: '9.2T', icon: <Layers size={14} />, sub: 'This cycle' },
-          { label: 'Truck Utilization', value: '87%', icon: <Truck size={14} />, sub: '+12% vs normal' },
-          { label: 'Expected Settlement', value: '₹9.4L', icon: <Wallet size={14} />, sub: 'This cycle' },
+          { label: 'Scheduled Beats', value: '4', icon: <MapPin size={14} />, sub: 'Active routes' },
+          { label: 'Beat PO Consolidation', value: '9.2T', icon: <Layers size={14} />, sub: 'This cycle' },
+          { label: 'OTP Verifications', value: '87%', icon: <Lock size={14} />, sub: 'Successful drops' },
+          { label: 'T+0 NBFC Settlement', value: '₹9.4L', icon: <Wallet size={14} />, sub: '0 days DSO' },
         ].map((kpi) => (
           <div key={kpi.label} className="bg-bg-card p-4">
             <div className="flex items-center gap-1.5 text-[0.65rem] text-text-tertiary uppercase tracking-wider mb-1.5">
@@ -46,24 +46,24 @@ export default function DistributorDashboard() {
       {/* Cluster table */}
       <div className="p-5">
         <div className="flex items-center justify-between mb-3">
-          <h4 className="text-[0.85rem] font-semibold text-text-primary">Active Clusters</h4>
-          <span className="text-[0.7rem] text-text-tertiary">{clusterData.length} clusters</span>
+          <h4 className="text-[0.85rem] font-semibold text-text-primary">Active Beats</h4>
+          <span className="text-[0.7rem] text-text-tertiary">{beatData.length} beats</span>
         </div>
 
         <div className="overflow-x-auto -mx-5">
           <table className="w-full text-sm">
             <thead>
               <tr className="text-left text-[0.65rem] uppercase tracking-wider text-text-tertiary border-b border-border-light">
-                <th className="px-5 py-2.5 font-medium">Cluster</th>
-                <th className="px-3 py-2.5 font-medium">Demand</th>
-                <th className="px-3 py-2.5 font-medium">Truck</th>
-                <th className="px-3 py-2.5 font-medium hidden md:table-cell">Merchants</th>
-                <th className="px-3 py-2.5 font-medium hidden lg:table-cell">Settlement</th>
-                <th className="px-5 py-2.5 font-medium text-right">Delivery</th>
+                <th className="px-5 py-2.5 font-medium">Scheduled Beat</th>
+                <th className="px-3 py-2.5 font-medium">PO Consolidation</th>
+                <th className="px-3 py-2.5 font-medium">OTP Verified</th>
+                <th className="px-3 py-2.5 font-medium hidden md:table-cell">Kirana Stops</th>
+                <th className="px-3 py-2.5 font-medium hidden lg:table-cell">T+0 Disbursal</th>
+                <th className="px-5 py-2.5 font-medium text-right">Dispatch Status</th>
               </tr>
             </thead>
             <tbody>
-              {clusterData.map((c) => (
+              {beatData.map((c) => (
                 <tr key={c.name} className="border-b border-border-light last:border-0 hover:bg-bg-secondary/50 transition-colors">
                   <td className="px-5 py-3">
                     <div className="flex items-center gap-2">
@@ -106,7 +106,7 @@ export default function DistributorDashboard() {
 
         {/* Footer note */}
         <div className="mt-4 pt-4 border-t border-border-light text-[0.7rem] text-text-tertiary flex items-center justify-between">
-          <span>One consolidated drop per cluster. Faster payment vs fragmented routes.</span>
+          <span>Driver OTP Dispatch verified at kirana doorstep. 100% T+0 NBFC Disbursal.</span>
           <span className="text-brand-primary font-medium">Illustrative economics</span>
         </div>
       </div>

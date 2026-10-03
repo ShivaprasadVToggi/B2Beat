@@ -14,16 +14,15 @@ import {
 
 const steps = [
   {
-    num: '01',
-    title: 'Merchant joins cluster',
-    desc: 'A retailer within the 15 km radius joins their local cluster. Identity verified, capacity assessed from digital receipts.',
+    title: 'Merchant joins beat pool',
+    desc: 'A retailer joins their scheduled route beat. Identity verified, capacity assessed from digital receipts.',
     icon: <Store size={22} />,
     detail: 'Onboarding includes consent-based Account Aggregator setup for credit capacity signals.',
   },
   {
     num: '02',
     title: 'Selects SKU',
-    desc: 'Merchant browses the cluster SKU catalog — staples, agri-inputs, daily goods — and selects what they need.',
+    desc: 'Merchant browses the scheduled beat SKU catalog — staples, agri-inputs, daily goods — and selects what they need.',
     icon: <Layers size={22} />,
     detail: 'SKU catalog is curated based on local demand patterns and distributor availability.',
   },
@@ -44,14 +43,14 @@ const steps = [
   {
     num: '05',
     title: 'Distributor fulfills',
-    desc: 'Distributor prepares per-merchant sealed crates, loads a single 3-ton truck, and dispatches to the cluster hub.',
+    desc: 'Distributor prepares per-merchant sealed crates and dispatches scheduled doorstep deliveries.',
     icon: <Truck size={22} />,
-    detail: 'One consolidated drop. High truck utilization. Transit insurance active.',
+    detail: 'Scheduled doorstep drops. High truck utilization. Transit insurance active.',
   },
   {
     num: '06',
-    title: 'Merchant collects sealed crate',
-    desc: 'At the cluster hub, each merchant verifies with OTP. Custody formally transfers. Crate is sealed and tamper-evident.',
+    title: 'Merchant receives doorstep delivery',
+    desc: 'At their shop counter, each merchant verifies with OTP. Custody formally transfers. Crate is sealed and tamper-evident.',
     icon: <Package size={22} />,
     detail: 'Merchant-specific invoice generated. GST-compliant documentation per transaction.',
   },
@@ -156,7 +155,7 @@ export default function HowItWorksPage() {
                 {[
                   'Demand aggregates into purchasing power',
                   'Wholesale pricing unlocks for all participants',
-                  'Consolidated delivery makes last-mile economics work',
+                  'Doorstep delivery on scheduled beats makes last-mile economics work',
                   'Inventory facility bridges the capital gap',
                   'Repayment from real cash flow builds credit history',
                   'Stronger credit history enables larger next-cycle capacity',

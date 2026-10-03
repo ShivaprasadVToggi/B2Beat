@@ -170,11 +170,50 @@ export const financePartners: FinancePartner[] = [
   { id: 'f3', name: 'Account Aggregator', type: 'Account Aggregator' },
 ];
 
+export interface DistributorBeatPool {
+  id: string;
+  beatName: string; // e.g., "North Highway Beat - Tue/Fri"
+  distributorName: string;
+  category: 'OIL' | 'SUGAR' | 'GRAINS' | 'PULSES';
+  totalCapacityUnits: number;
+  currentCommittedUnits: number;
+  cutOffTimestamp: string; // 48-hour window
+  tiers: {
+    tier1: { fillThreshold: 0.40; discount: 0.015 }; // 1.5%
+    tier2: { fillThreshold: 0.70; discount: 0.025 }; // 2.5%
+    tier3: { fillThreshold: 1.00; discount: 0.035 }; // 3.5%
+  };
+  maxStoreLimitShare: 0.35; // 35% anti-monopoly cap
+  isAnonymousCommitments: true;
+}
+
+export interface BeatOrder {
+  id: string;
+  storeId: string;
+  poolId: string;
+  orderTotalAmount: number;
+  unlockedDiscountPercentage: number;
+  fulfillment: {
+    type: 'DISTRIBUTOR_DOORSTEP';
+    counterOtp: string; // 4-digit code
+    driverHandoverStatus: 'PENDING' | 'INSPECTED_AND_DELIVERED';
+  };
+  financing: {
+    nbfcDisbursalStatus: 'T0_DISBURSED_TO_DISTRIBUTOR' | 'PENDING';
+    disbursalTarget: 'DISTRIBUTOR_BANK_ACCOUNT'; // Never merchant
+    tenureDays: 14;
+    dailyUpiSweepSharePercent: number; // 15% - 20%
+    amountRepaidViaSweeps: number;
+    remainingAutoPayBalance: number;
+    autoPayExecutionDate: string; // Day 14
+  };
+}
+
 // Pricing tiers reference
 export const PRICING_TIERS = [
-  { threshold: 40, discount: 2, label: 'Tier 1' },
-  { threshold: 70, discount: 4, label: 'Tier 2' },
-  { threshold: 100, discount: 7, label: 'Wholesale' },
+  { threshold: 40, discount: 1.5, label: 'Tier 1' },
+  { threshold: 70, discount: 2.5, label: 'Tier 2' },
+  { threshold: 100, discount: 3.5, label: 'Wholesale' },
 ] as const;
 
 // Merchant share cap
@@ -182,3 +221,4 @@ export const MERCHANT_SHARE_CAP = 0.35; // 35%
 
 // Loan tenor
 export const LOAN_TENOR_DAYS = 14;
+

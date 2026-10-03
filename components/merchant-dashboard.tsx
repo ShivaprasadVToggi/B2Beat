@@ -177,8 +177,8 @@ export default function MerchantDashboard() {
                   <span className="font-medium text-status-positive tabular">₹561</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-text-tertiary">Cutoff</span>
-                  <span className="font-medium tabular">Oct 02, 2026</span>
+                  <span className="text-text-tertiary">Cutoff Countdown</span>
+                  <span className="font-medium tabular text-brand-primary">48:00:00</span>
                 </div>
               </div>
             </div>
@@ -189,24 +189,48 @@ export default function MerchantDashboard() {
         )}
 
         {activeTab === 'orders' && (
-          <div className="space-y-2">
-            {recentOrders.map((order) => (
-              <div
-                key={order.id}
-                className="flex items-center justify-between p-3 rounded-lg border border-border-light hover:bg-bg-secondary transition-colors"
-              >
+          <div className="space-y-4">
+            <div className="p-4 rounded-lg border border-brand-primary/40 bg-brand-muted/10">
+              <div className="flex items-center justify-between mb-2">
+                <div className="text-[0.85rem] font-medium text-text-primary">Sona Masoori Rice · ORD-2847</div>
+                <StatusPill status="Out for Delivery" />
+              </div>
+              <div className="text-[0.7rem] text-text-secondary mb-3">
+                Shop Doorstep Delivery (via Scheduled Distributor Beat Truck)
+              </div>
+              <div className="p-3 bg-bg-card rounded-md border border-border-light flex items-center justify-between">
                 <div>
-                  <div className="text-[0.85rem] font-medium text-text-primary">{order.sku}</div>
-                  <div className="text-[0.7rem] text-text-tertiary">
-                    {order.id} · {order.qty} · {order.date}
-                  </div>
+                  <div className="text-[0.65rem] text-text-tertiary uppercase mb-1">Counter OTP</div>
+                  <div className="text-lg font-mono font-bold tracking-widest text-text-primary">8492</div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-[0.85rem] font-medium text-text-primary tabular">{order.amount}</span>
-                  <StatusPill status={order.status} />
+                <div className="text-right text-[0.65rem] text-text-secondary max-w-[150px]">
+                  Inspect goods at your shop counter and share this OTP with the delivery driver to confirm legal custody transfer.
                 </div>
               </div>
-            ))}
+              <div className="mt-3 text-[0.65rem] text-status-positive">
+                T+0 NBFC Closed-Loop Disbursal: 100% invoice value disbursed directly to Distributor's bank account. ₹0 cash disbursed to store.
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              {recentOrders.slice(1).map((order) => (
+                <div
+                  key={order.id}
+                  className="flex items-center justify-between p-3 rounded-lg border border-border-light hover:bg-bg-secondary transition-colors"
+                >
+                  <div>
+                    <div className="text-[0.85rem] font-medium text-text-primary">{order.sku}</div>
+                    <div className="text-[0.7rem] text-text-tertiary">
+                      {order.id} · {order.qty} · {order.date}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[0.85rem] font-medium text-text-primary tabular">{order.amount}</span>
+                    <StatusPill status={order.status} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
@@ -222,12 +246,12 @@ export default function MerchantDashboard() {
               </div>
               <div className="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-sm">
                 <div>
-                  <div className="text-[0.65rem] text-text-inverse-secondary uppercase">Daily Sweep</div>
-                  <div className="font-medium tabular">₹780 avg</div>
+                  <div className="text-[0.65rem] text-text-inverse-secondary uppercase">Daily QR Sweep (15-20%)</div>
+                  <div className="font-medium tabular">₹780 swept</div>
                 </div>
                 <div>
-                  <div className="text-[0.65rem] text-text-inverse-secondary uppercase">Floor Repayment</div>
-                  <div className="font-medium tabular">₹1,335 / day</div>
+                  <div className="text-[0.65rem] text-text-inverse-secondary uppercase">AutoPay Safety Floor</div>
+                  <div className="font-medium tabular">Triggers Day 14</div>
                 </div>
               </div>
             </div>
