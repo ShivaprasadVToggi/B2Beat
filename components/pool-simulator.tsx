@@ -269,7 +269,7 @@ export default function PoolSimulator({
           </div>
           <div className="flex flex-row justify-between items-start gap-4 py-3 border-b border-slate-100">
             <span className="text-slate-500 text-sm font-medium flex-1">Daily Paytm QR Micro-Sweep</span>
-            <span className="text-cyan-600 font-semibold text-sm text-right shrink-0">Est. 15% of daily sales</span>
+            <span className="text-amber-600 font-semibold text-sm text-right shrink-0">Est. 15% of daily sales</span>
           </div>
           <div className="flex flex-row justify-between items-start gap-4 py-3">
             <span className="text-slate-500 text-sm font-medium flex-1">Day-14 UPI AutoPay Floor</span>

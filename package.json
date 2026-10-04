@@ -1,6 +1,8 @@
 {
-  "name": "B2Beat",
-  "version": "0.1.0",
+  "name": "b2beat",
+  "version": "1.0.0",
+  "description": "Event-Driven Beat Aggregation & Automated Channel-Credit Orchestrator",
+  "author": "B2Beat",
   "private": true,
   "scripts": {
     "dev": "next dev",

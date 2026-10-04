@@ -67,7 +67,7 @@ export default function Navigation() {
             <img src="/logo.svg" alt="B2Beat" className="h-7 w-auto" />
             {/* Wordmark */}
             <span className="font-extrabold text-xl tracking-tighter text-slate-900">
-              B2<span className="text-cyan-600">Beat</span>
+              B2<span className="text-amber-500">Beat</span>
             </span>
           </Link>
 
