@@ -172,20 +172,20 @@ export default function PoolSimulator({
 
         {/* Unlocked state */}
         {isUnlocked && (
-          <div className="mb-6 p-4 rounded-lg bg-status-positive/10 border border-status-positive/20 flex items-start gap-3">
+          <div className="mb-6 p-3 rounded-lg bg-cyan-50/30 border border-cyan-100 flex items-start gap-3">
             <Check size={18} className="text-status-positive mt-0.5 flex-shrink-0" />
             <div className="grid grid-cols-3 gap-4 flex-1 text-sm">
               <div>
-                <div className="text-[0.7rem] text-text-tertiary uppercase">Wholesale Price</div>
-                <div className="font-semibold text-text-primary tabular">₹{effectivePrice.toFixed(0)}/kg</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Wholesale Price</div>
+                <div className="font-extrabold text-slate-900 tabular">₹{effectivePrice.toFixed(0)}/kg</div>
               </div>
               <div>
-                <div className="text-[0.7rem] text-text-tertiary uppercase">Delivery</div>
-                <div className="font-semibold text-text-primary">Shop Doorstep</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Delivery</div>
+                <div className="font-extrabold text-slate-900">Shop Doorstep</div>
               </div>
               <div>
-                <div className="text-[0.7rem] text-text-tertiary uppercase">Financing</div>
-                <div className="font-semibold text-text-primary">Eligible</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Financing</div>
+                <div className="font-extrabold text-slate-900">Eligible</div>
               </div>
             </div>
           </div>
@@ -212,18 +212,18 @@ export default function PoolSimulator({
             <div className="flex items-center gap-3">
               <button
                 onClick={() => adjustCommitment(-50)}
-                className="w-8 h-8 rounded-lg border border-border-light flex items-center justify-center text-text-secondary hover:bg-bg-secondary transition-colors"
+                className="w-8 h-8 rounded-md border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors text-slate-600"
                 aria-label="Decrease commitment"
               >
                 <Minus size={14} />
               </button>
               <div className="w-20 text-center">
-                <div className="text-lg font-semibold text-text-primary tabular">{userCommitment}</div>
-                <div className="text-[0.65rem] text-text-tertiary">kg</div>
+                <div className="text-lg font-extrabold text-slate-900 tabular">{userCommitment}</div>
+                <div className="text-[0.65rem] text-slate-400 font-medium">kg</div>
               </div>
               <button
                 onClick={() => adjustCommitment(50)}
-                className="w-8 h-8 rounded-lg border border-border-light flex items-center justify-center text-text-secondary hover:bg-bg-secondary transition-colors"
+                className="w-8 h-8 rounded-md border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors text-slate-600"
                 aria-label="Increase commitment"
               >
                 <Plus size={14} />
@@ -233,18 +233,18 @@ export default function PoolSimulator({
 
           {/* User economics */}
           {userCommitment > 0 && (
-            <div className="grid grid-cols-3 gap-3 mt-4 p-4 rounded-lg bg-bg-secondary">
+            <div className="grid grid-cols-3 gap-3 mt-4 p-4 rounded-lg bg-slate-50 border-t border-slate-100">
               <div>
-                <div className="text-[0.65rem] text-text-tertiary uppercase">INVOICE VALUE</div>
-                <div className="text-[0.95rem] font-semibold text-text-primary tabular">₹8,190</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">INVOICE VALUE</div>
+                <div className="text-lg font-extrabold text-slate-900 tabular">₹8,190</div>
               </div>
               <div>
-                <div className="text-[0.65rem] text-text-tertiary uppercase">EFFECTIVE RATE</div>
-                <div className="text-[0.95rem] font-semibold text-text-primary tabular">₹41/kg</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">EFFECTIVE RATE</div>
+                <div className="text-lg font-extrabold text-slate-900 tabular">₹41/kg</div>
               </div>
               <div>
-                <div className="text-[0.65rem] text-text-tertiary uppercase">NET MARGIN BOOST</div>
-                <div className="text-[0.95rem] font-semibold text-status-positive tabular">+₹210</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">NET MARGIN BOOST</div>
+                <div className="text-lg font-extrabold text-emerald-600 tabular">+₹210</div>
               </div>
             </div>
           )}
@@ -258,22 +258,22 @@ export default function PoolSimulator({
           <span className="text-[0.75rem] text-text-tertiary tabular">Simulated</span>
         </div>
 
-        <div className="space-y-1.5 max-h-[340px] overflow-y-auto pr-1">
-          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm bg-bg-secondary transition-colors">
-            <span className="text-text-secondary">T+0 Upfront Cash Required</span>
-            <span className="font-medium text-status-positive bg-status-positive/10 px-2 py-0.5 rounded-full tabular">₹0</span>
+        <div className="max-h-[340px] overflow-y-auto pr-1 divide-y divide-slate-100">
+          <div className="flex items-center justify-between px-3 py-3">
+            <span className="text-slate-500 text-sm font-medium">T+0 Upfront Cash Required</span>
+            <span className="bg-emerald-50 text-emerald-600 px-2.5 py-0.5 rounded-full font-bold text-xs border border-emerald-200">₹0</span>
           </div>
-          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm hover:bg-bg-secondary transition-colors">
-            <span className="text-text-secondary">NBFC Disbursal to Distributor</span>
-            <span className="font-medium text-text-primary tabular">₹8,190</span>
+          <div className="flex items-center justify-between px-3 py-3">
+            <span className="text-slate-500 text-sm font-medium">NBFC Disbursal to Distributor</span>
+            <span className="text-slate-900 font-semibold text-sm tabular">₹8,190</span>
           </div>
-          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm hover:bg-bg-secondary transition-colors">
-            <span className="text-text-secondary">Daily Paytm QR Micro-Sweep</span>
-            <span className="font-medium text-brand-primary tabular">Est. 15% of daily sales</span>
+          <div className="flex items-center justify-between px-3 py-3">
+            <span className="text-slate-500 text-sm font-medium">Daily Paytm QR Micro-Sweep</span>
+            <span className="text-cyan-600 font-semibold text-sm tabular">Est. 15% of daily sales</span>
           </div>
-          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm hover:bg-bg-secondary transition-colors">
-            <span className="text-text-secondary">Day-14 UPI AutoPay Floor</span>
-            <span className="font-medium text-text-primary tabular">Residual Balance</span>
+          <div className="flex items-center justify-between px-3 py-3">
+            <span className="text-slate-500 text-sm font-medium">Day-14 UPI AutoPay Floor</span>
+            <span className="text-slate-900 font-semibold text-sm tabular">Residual Balance</span>
           </div>
         </div>
 

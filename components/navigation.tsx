@@ -62,13 +62,12 @@ export default function Navigation() {
       >
         <nav className="container-page flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <LogoMark size={28} className="text-text-primary transition-colors group-hover:text-brand-primary" />
-            <span className="font-semibold text-[0.95rem] tracking-tight text-text-primary">
-              B2Beat
-            </span>
-            <span className="hidden sm:inline text-[0.65rem] font-medium px-1.5 py-0.5 rounded bg-bg-secondary text-text-tertiary border border-border-light">
-              2.0
+          <Link href="/" className="flex items-center gap-2 group">
+            {/* Logo Icon */}
+            <img src="/logo.svg" alt="B2Beat" className="h-7 w-auto" />
+            {/* Wordmark */}
+            <span className="font-extrabold text-xl tracking-tighter text-slate-900">
+              B2<span className="text-cyan-600">Beat</span>
             </span>
           </Link>
 
