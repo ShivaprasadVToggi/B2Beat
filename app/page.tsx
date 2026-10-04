@@ -44,7 +44,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center reveal">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-secondary border border-border-light text-[0.75rem] text-text-secondary mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
-              VyaparPool 3.0 · Commerce Infrastructure
+              B2Beat 3.0 · Commerce Infrastructure
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-primary mb-6 leading-[1.02]">
@@ -167,22 +167,21 @@ export default function HomePage() {
         <div className="container-page">
           <div className="grid lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-4 lg:sticky lg:top-28 reveal">
-              <p className="eyebrow mb-4">Interactive Demo</p>
+              <p className="eyebrow mb-4">LIVE ROUTE CLUSTER</p>
               <h2 className="font-display text-3xl md:text-4xl text-text-primary mb-5">
                 Pool demand.
                 <br />
-                Unlock the next price tier.
+                Unlock the 3.5% trade spread.
               </h2>
               <p className="text-[0.95rem] text-text-secondary leading-relaxed mb-6">
-                Watch how anonymous merchant commitments progressively unlock wholesale pricing.
-                When the pool crosses a threshold, every participant gets the better rate.
+                Aggregating neighborhood staple demand along existing distributor delivery beats. Hit the volume threshold to trigger T+0 NBFC disbursal and unlock real wholesale cash discounts.
               </p>
               <ul className="space-y-3 text-sm">
                 {[
-                  'Progressive pricing tiers at 40% / 70% / 100%',
-                  '35% merchant share cap prevents dominance',
-                  'Binding commitments create predictable volume',
-                  'Identities remain blind to the pool',
+                  'Algorithmic pricing tiers at 40% / 70% / 100%',
+                  '35% atomic concurrency lock prevents monopolies',
+                  'Closed-loop T+0 RTGS settlement to distributor',
+                  'Cryptographically anonymous to local competitors',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-text-secondary">
                     <Check size={15} className="text-brand-primary mt-0.5 flex-shrink-0" />
@@ -451,7 +450,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="mt-4 p-3 rounded-lg bg-bg-dark text-text-inverse-secondary text-[0.7rem]">
-                  <span className="text-text-inverse font-medium">Note:</span> VyaparPool orchestrates the workflow.
+                  <span className="text-text-inverse font-medium">Note:</span> B2Beat orchestrates the workflow.
                   Lending and payment functions are performed by regulated partners.
                 </div>
               </div>
@@ -669,7 +668,7 @@ export default function HomePage() {
           <div className="mt-8 max-w-xl mx-auto reveal">
             <div className="p-6 rounded-xl bg-text-primary text-text-inverse text-center">
               <div className="text-[0.7rem] uppercase tracking-[0.15em] text-text-inverse-secondary mb-2">At the center</div>
-              <div className="text-2xl font-semibold mb-2">VyaparPool</div>
+              <div className="text-2xl font-semibold mb-2">B2Beat</div>
               <p className="text-[0.85rem] text-text-inverse-secondary">
                 Orchestrates the commerce workflow. Regulated financial functions remain with licensed partners.
               </p>
@@ -732,7 +731,7 @@ export default function HomePage() {
               </h2>
               <p className="text-[1rem] text-text-inverse-secondary leading-relaxed mb-8 max-w-xl">
                 Whether you're a retailer, distributor, or finance partner —
-                VyaparPool creates a new operating layer for the commerce outside the metro.
+                B2Beat creates a new operating layer for the commerce outside the metro.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-bg-card text-text-primary rounded-lg font-medium text-[0.9rem] hover:bg-bg-secondary transition-colors">
@@ -750,3 +749,4 @@ export default function HomePage() {
     </>
   );
 }
+

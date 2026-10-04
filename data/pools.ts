@@ -1,4 +1,4 @@
-// Mock data for VyaparPool 2.0
+// Mock data for B2Beat 2.0
 // All data is illustrative / demo only
 
 export interface Cluster {
@@ -221,4 +221,5 @@ export const MERCHANT_SHARE_CAP = 0.35; // 35%
 
 // Loan tenor
 export const LOAN_TENOR_DAYS = 14;
+
 

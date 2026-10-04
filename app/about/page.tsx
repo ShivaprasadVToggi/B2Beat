@@ -26,7 +26,7 @@ export default function AboutPage() {
               <span className="text-text-secondary">how rural commerce actually works.</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-              VyaparPool exists because rural retail already has demand — it just doesn't have coordination.
+              B2Beat exists because rural retail already has demand — it just doesn't have coordination.
               We're building the operating layer that turns fragmented merchant demand into
               real purchasing power and working capital.
             </p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 and is too small a stop for efficient distributor routes.
               </p>
               <p>
-                VyaparPool doesn't try to replace these retailers. It doesn't try to build a giant warehouse
+                B2Beat doesn't try to replace these retailers. It doesn't try to build a giant warehouse
                 in the middle of nowhere. Instead, we create a thin coordination layer: aggregate demand
                 within a 15 km cluster, unlock the next price tier, consolidate into one truck drop,
                 and bridge the inventory capital with short-duration credit.
@@ -82,7 +82,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto reveal">
             <div className="p-6 md:p-8 rounded-xl bg-bg-card border border-border-light mb-6">
               <p className="text-[1rem] text-text-primary leading-relaxed mb-4">
-                <span className="font-semibold">VyaparPool orchestrates the commerce workflow.</span>{' '}
+                <span className="font-semibold">B2Beat orchestrates the commerce workflow.</span>{' '}
                 Regulated financial functions remain with licensed partners.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 text-sm">
@@ -200,3 +200,4 @@ export default function AboutPage() {
     </>
   );
 }
+

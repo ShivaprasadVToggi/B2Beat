@@ -1,8 +1,8 @@
-# VyaparPool 2.0
+# B2Beat 2.0
 
 > Demand pooling and embedded working-capital infrastructure for rural Indian MSME retailers.
 
-VyaparPool aggregates fragmented rural merchant demand into cluster-level purchasing power, unlocks distributor pricing, coordinates consolidated delivery, and finances each merchant's fulfilled order through a short-duration inventory facility.
+B2Beat aggregates fragmented rural merchant demand into cluster-level purchasing power, unlocks distributor pricing, coordinates consolidated delivery, and finances each merchant's fulfilled order through a short-duration inventory facility.
 
 ## The Core Mechanism
 
@@ -113,7 +113,7 @@ Labels used where appropriate: *Illustrative*, *Demo*, *Target*, *Indicative*, *
 
 ## Regulatory Positioning
 
-- VyaparPool **orchestrates the commerce workflow**
+- B2Beat **orchestrates the commerce workflow**
 - Lending is performed by **regulated NBFC partners**
 - Payment processing uses **regulated payment infrastructure**
 - Data access is **consent-based** (Account Aggregator framework)
@@ -141,3 +141,4 @@ Copy `.env.example` to `.env.local` and fill in values. No secrets are committed
 ## License
 
 Private / Internal project.
+

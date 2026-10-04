@@ -16,7 +16,7 @@ const valueProps = [
   {
     icon: <FileText size={24} />,
     title: 'Cash-flow underwriting',
-    desc: 'Consent-based Account Aggregator data plus real commerce behavior from the VyaparPool system.',
+    desc: 'Consent-based Account Aggregator data plus real commerce behavior from the B2Beat system.',
   },
   {
     icon: <Layers size={24} />,
@@ -69,12 +69,12 @@ export default function FinancePartnersPage() {
               <span className="text-text-secondary">verified commerce behavior.</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-              VyaparPool generates a rich stream of merchant-level commerce signals —
+              B2Beat generates a rich stream of merchant-level commerce signals —
               commitments, order fulfillment, custody transfers, repayment —
               that complement traditional underwriting data.
             </p>
             <div className="mt-6 p-4 rounded-lg bg-bg-secondary border border-border-light text-[0.85rem] text-text-secondary max-w-xl">
-              <span className="font-medium text-text-primary">Note:</span> VyaparPool is not a regulated lender.
+              <span className="font-medium text-text-primary">Note:</span> B2Beat is not a regulated lender.
               We orchestrate the commerce workflow and provide data infrastructure.
               All lending is performed by licensed NBFC partners.
             </div>
@@ -109,7 +109,7 @@ export default function FinancePartnersPage() {
                 You remain the regulated entity.
               </h2>
               <p className="text-[0.95rem] text-text-secondary leading-relaxed mb-6">
-                VyaparPool provides the commerce data, the merchant identity context,
+                B2Beat provides the commerce data, the merchant identity context,
                 and the repayment collection rails. Your institution retains the lending license,
                 the customer relationship, and the balance sheet.
               </p>
@@ -117,7 +117,7 @@ export default function FinancePartnersPage() {
                 {[
                   'NBFC partner makes credit decisions',
                   'Funds disbursed from your books',
-                  'VyaparPool orchestrates repayment flows',
+                  'B2Beat orchestrates repayment flows',
                   'Regulated payment infrastructure handles settlement',
                   'Portfolio reporting and dashboards provided',
                 ].map((f) => (
@@ -131,11 +131,11 @@ export default function FinancePartnersPage() {
             <div className="reveal reveal-delay-2">
               <div className="bg-bg-card border border-border-light rounded-xl p-6 space-y-3">
                 {[
-                  { from: 'VyaparPool', to: 'NBFC Partner', data: 'Merchant commerce signals, pool & order data' },
+                  { from: 'B2Beat', to: 'NBFC Partner', data: 'Merchant commerce signals, pool & order data' },
                   { from: 'NBFC Partner', to: 'Distributor', data: 'Facility disbursement' },
                   { from: 'Merchant', to: 'Payment Rail', data: 'Digital sales + UPI AutoPay' },
                   { from: 'Payment Rail', to: 'NBFC Partner', data: 'Repayment allocation' },
-                  { from: 'VyaparPool', to: 'NBFC Partner', data: 'Portfolio reporting & dashboards' },
+                  { from: 'B2Beat', to: 'NBFC Partner', data: 'Portfolio reporting & dashboards' },
                 ].map((flow, i) => (
                   <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-bg-secondary/60 border border-border-light">
                     <div className="flex-shrink-0 text-[0.65rem] font-mono text-text-tertiary">0{i + 1}</div>
@@ -176,3 +176,4 @@ export default function FinancePartnersPage() {
     </>
   );
 }
+

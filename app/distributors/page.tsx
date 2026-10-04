@@ -58,7 +58,7 @@ export default function DistributorsPage() {
               <span className="text-text-secondary">into efficient routes.</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-              VyaparPool aggregates merchant demand at the scheduled beat level,
+              B2Beat aggregates merchant demand at the scheduled beat level,
               giving you predictable volume, high truck utilization, and
               cleaner payment economics — without the cost of building rural reach yourself.
             </p>
@@ -89,7 +89,7 @@ export default function DistributorsPage() {
           <div className="max-w-3xl mb-12 reveal">
             <p className="eyebrow mb-4">Route Economics</p>
             <h2 className="font-display text-3xl md:text-4xl text-text-primary mb-5">
-              Normal route vs. VyaparPool route.
+              Normal route vs. B2Beat route.
             </h2>
             <p className="text-[0.8rem] text-text-tertiary">Illustrative economics for comparison</p>
           </div>
@@ -114,7 +114,7 @@ export default function DistributorsPage() {
               </div>
             </div>
             <div className="p-7 rounded-xl border border-brand-primary/30 bg-brand-muted/5">
-              <div className="text-[0.7rem] uppercase tracking-wider text-brand-primary mb-2">VyaparPool Route</div>
+              <div className="text-[0.7rem] uppercase tracking-wider text-brand-primary mb-2">B2Beat Route</div>
               <h3 className="text-xl font-semibold text-text-primary mb-5">Scheduled beat deliveries</h3>
               <div className="space-y-3 text-sm">
                 {[
@@ -158,3 +158,4 @@ export default function DistributorsPage() {
     </>
   );
 }
+

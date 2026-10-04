@@ -85,7 +85,7 @@ export default function PoolSimulator({
             <h3 className="text-xl font-semibold text-text-primary">{skuName}</h3>
           </div>
           <div className="text-right">
-            <div className="text-[0.7rem] text-text-tertiary uppercase tracking-wider">Cutoff Countdown</div>
+            <div className="text-[0.7rem] text-text-tertiary uppercase tracking-wider">T-12h ROUTE CUTOFF</div>
             <div className="text-[0.85rem] font-medium text-brand-primary tabular">48:00:00</div>
           </div>
         </div>
@@ -196,8 +196,8 @@ export default function PoolSimulator({
           <div className="mb-6 p-3 rounded-lg bg-bg-secondary flex items-center gap-3 text-sm">
             <Dot className="text-brand-primary flex-shrink-0" />
             <span className="text-text-secondary">
-              <span className="font-medium text-text-primary">{nextTier.kgNeeded.toLocaleString()} kg</span> to unlock{' '}
-              <span className="font-medium text-brand-primary">-{nextTier.discount}% tier</span>
+              <span className="font-medium text-text-primary">{nextTier.kgNeeded.toLocaleString()} kg</span> to trigger{' '}
+              <span className="font-medium text-brand-primary">100% Volume Slab & Cash Discount</span>
             </span>
           </div>
         )}
@@ -235,16 +235,16 @@ export default function PoolSimulator({
           {userCommitment > 0 && (
             <div className="grid grid-cols-3 gap-3 mt-4 p-4 rounded-lg bg-bg-secondary">
               <div>
-                <div className="text-[0.65rem] text-text-tertiary uppercase">Order Value</div>
-                <div className="text-[0.95rem] font-semibold text-text-primary tabular">₹{userOrderValue.toLocaleString()}</div>
+                <div className="text-[0.65rem] text-text-tertiary uppercase">INVOICE VALUE</div>
+                <div className="text-[0.95rem] font-semibold text-text-primary tabular">₹8,190</div>
               </div>
               <div>
-                <div className="text-[0.65rem] text-text-tertiary uppercase">Effective Rate</div>
-                <div className="text-[0.95rem] font-semibold text-text-primary tabular">₹{effectivePrice.toFixed(0)}/kg</div>
+                <div className="text-[0.65rem] text-text-tertiary uppercase">EFFECTIVE RATE</div>
+                <div className="text-[0.95rem] font-semibold text-text-primary tabular">₹41/kg</div>
               </div>
               <div>
-                <div className="text-[0.65rem] text-text-tertiary uppercase">Savings</div>
-                <div className="text-[0.95rem] font-semibold text-status-positive tabular">₹{userSavings.toLocaleString()}</div>
+                <div className="text-[0.65rem] text-text-tertiary uppercase">NET MARGIN BOOST</div>
+                <div className="text-[0.95rem] font-semibold text-status-positive tabular">+₹210</div>
               </div>
             </div>
           )}
@@ -254,39 +254,31 @@ export default function PoolSimulator({
       {/* Participants panel */}
       <div className="lg:col-span-2 bg-bg-card border border-border-light rounded-xl p-6">
         <div className="flex items-center justify-between mb-4">
-          <h4 className="text-[0.85rem] font-semibold text-text-primary">Anonymous Participants</h4>
-          <span className="text-[0.75rem] text-text-tertiary tabular">{merchants.length} merchants</span>
+          <h4 className="text-[0.85rem] font-semibold text-text-primary">Dual-Rail Repayment Ledger</h4>
+          <span className="text-[0.75rem] text-text-tertiary tabular">Simulated</span>
         </div>
 
         <div className="space-y-1.5 max-h-[340px] overflow-y-auto pr-1">
-          {merchants.map((m) => (
-            <div
-              key={m.id}
-              className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-colors ${
-                m.isYou ? 'bg-brand-muted/20 border border-brand-muted' : 'hover:bg-bg-secondary'
-              }`}
-            >
-              <div className="flex items-center gap-2.5">
-                <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-[0.65rem] font-medium ${
-                    m.isYou
-                      ? 'bg-brand-primary text-white'
-                      : 'bg-bg-secondary text-text-tertiary'
-                  }`}
-                >
-                  {m.id.slice(0, 2)}
-                </div>
-                <span className={`${m.isYou ? 'font-medium text-brand-primary' : 'text-text-secondary'}`}>
-                  {m.anonymous}
-                </span>
-              </div>
-              <span className="font-medium text-text-primary tabular">{m.qty.toLocaleString()} kg</span>
-            </div>
-          ))}
+          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm bg-bg-secondary transition-colors">
+            <span className="text-text-secondary">T+0 Upfront Cash Required</span>
+            <span className="font-medium text-status-positive bg-status-positive/10 px-2 py-0.5 rounded-full tabular">₹0</span>
+          </div>
+          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm hover:bg-bg-secondary transition-colors">
+            <span className="text-text-secondary">NBFC Disbursal to Distributor</span>
+            <span className="font-medium text-text-primary tabular">₹8,190</span>
+          </div>
+          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm hover:bg-bg-secondary transition-colors">
+            <span className="text-text-secondary">Daily Paytm QR Micro-Sweep</span>
+            <span className="font-medium text-brand-primary tabular">Est. 15% of daily sales</span>
+          </div>
+          <div className="flex items-center justify-between px-3 py-3 rounded-lg text-sm hover:bg-bg-secondary transition-colors">
+            <span className="text-text-secondary">Day-14 UPI AutoPay Floor</span>
+            <span className="font-medium text-text-primary tabular">Residual Balance</span>
+          </div>
         </div>
 
         <div className="mt-4 pt-4 border-t border-border-light text-[0.7rem] text-text-tertiary">
-          <p>Identities are blind to the pool. Only the system verifies commitment capacity.</p>
+          <p>*Ledger simulates automated T+0 nodal splits via Paytm PA. Legal custody transfers upon driver OTP verification at doorstep.</p>
         </div>
       </div>
     </div>

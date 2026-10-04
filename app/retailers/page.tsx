@@ -70,7 +70,7 @@ export default function RetailersPage() {
               <span className="text-text-secondary">Without wholesale scale.</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-              If you're a rural retailer running 10–25 kg/day of staples, VyaparPool
+              If you're a rural retailer running 10–25 kg/day of staples, B2Beat
               turns your individual demand into collective purchasing power —
               and finances the inventory against your real cash flow.
             </p>
@@ -109,7 +109,7 @@ export default function RetailersPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-5 stagger-children">
             {[
-              { n: '01', t: 'Check your cluster', d: 'See if a VyaparPool cluster is active within 15 km of your shop.' },
+              { n: '01', t: 'Check your cluster', d: 'See if a B2Beat cluster is active within 15 km of your shop.' },
               { n: '02', t: 'Verify capacity', d: 'Consent-based digital receipts check establishes your indicative credit capacity.' },
               { n: '03', t: 'Start committing', d: 'Join active pools, commit quantities, and track wholesale savings accumulate.' },
             ].map((s) => (
@@ -146,3 +146,4 @@ export default function RetailersPage() {
     </>
   );
 }
+

@@ -1,4 +1,4 @@
-// VyaparPool Design System
+// B2Beat Design System
 // Color palette - institutional, financial, earthy
 
 export const colors = {
@@ -40,3 +40,4 @@ export const colors = {
 } as const;
 
 export type ColorSystem = typeof colors;
+

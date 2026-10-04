@@ -65,7 +65,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center gap-2.5 group">
             <LogoMark size={28} className="text-text-primary transition-colors group-hover:text-brand-primary" />
             <span className="font-semibold text-[0.95rem] tracking-tight text-text-primary">
-              VyaparPool
+              B2Beat
             </span>
             <span className="hidden sm:inline text-[0.65rem] font-medium px-1.5 py-0.5 rounded bg-bg-secondary text-text-tertiary border border-border-light">
               2.0
@@ -200,3 +200,4 @@ export default function Navigation() {
     </>
   );
 }
+

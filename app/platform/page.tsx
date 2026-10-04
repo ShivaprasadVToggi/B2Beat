@@ -71,7 +71,7 @@ export default function PlatformPage() {
               <span className="text-text-secondary">One operating system for rural commerce.</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-              VyaparPool is built as a system of specialized engines that pass a transaction
+              B2Beat is built as a system of specialized engines that pass a transaction
               through its complete lifecycle — from demand signal to fulfilled repayment.
             </p>
           </div>
@@ -242,3 +242,4 @@ export default function PlatformPage() {
     </>
   );
 }
+

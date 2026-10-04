@@ -204,11 +204,15 @@ export const Dot = ({ className, size = 8 }: IconProps) => (
   </svg>
 );
 
-// VyaparPool Logo Mark
+// B2Beat Logo Mark
 export const LogoMark = ({ className, size = 32 }: { className?: string; size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 32 32" className={className} fill="none">
-    <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M9 22V10l7 8 7-8v12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="16" cy="10" r="1.5" fill="currentColor" />
-  </svg>
+  <img 
+    src="/logo.svg" 
+    alt="B2Beat Logo" 
+    width={size * 1.66} 
+    height={size} 
+    className={className} 
+    style={{ objectFit: 'contain' }} 
+  />
 );
+

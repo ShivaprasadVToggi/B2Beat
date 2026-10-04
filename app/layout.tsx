@@ -18,15 +18,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vyaparpool.vercel.app"),
+  metadataBase: new URL("https://B2Beat.vercel.app"),
   title: {
-    default: "VyaparPool 2.0 — Demand Pooling & Embedded Working Capital",
-    template: "%s · VyaparPool",
+    default: "B2Beat 2.0 — Demand Pooling & Embedded Working Capital",
+    template: "%s · B2Beat",
   },
   description:
-    "VyaparPool aggregates fragmented rural merchant demand into cluster-level purchasing power, unlocks distributor pricing, coordinates consolidated delivery, and finances each merchant's fulfilled order through a short-duration inventory facility.",
+    "B2Beat aggregates fragmented rural merchant demand into cluster-level purchasing power, unlocks distributor pricing, coordinates consolidated delivery, and finances each merchant's fulfilled order through a short-duration inventory facility.",
   keywords: [
-    "VyaparPool",
+    "B2Beat",
     "demand pooling",
     "rural commerce",
     "MSME",
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
     "India commerce",
   ],
   openGraph: {
-    title: "VyaparPool 2.0 — Demand Pooling & Embedded Working Capital",
+    title: "B2Beat 2.0 — Demand Pooling & Embedded Working Capital",
     description:
       "Turn fragmented retail demand into purchasing power and working capital for rural Indian MSME retailers.",
     type: "website",
     locale: "en_IN",
-    siteName: "VyaparPool",
+    siteName: "B2Beat",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VyaparPool 2.0",
+    title: "B2Beat 2.0",
     description:
       "Demand pooling and embedded working-capital infrastructure for rural Indian MSME retailers.",
   },
@@ -73,3 +73,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

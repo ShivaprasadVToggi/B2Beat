@@ -79,7 +79,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-5">
               <LogoMark size={28} className="text-text-inverse" />
-              <span className="font-semibold text-[1rem] tracking-tight">VyaparPool</span>
+              <span className="font-semibold text-[1rem] tracking-tight">B2Beat</span>
               <span className="text-[0.65rem] font-medium px-1.5 py-0.5 rounded bg-white/5 text-text-inverse-secondary border border-border-dark">
                 2.0
               </span>
@@ -89,7 +89,7 @@ export default function Footer() {
             </p>
             <div className="mt-6 text-[0.75rem] text-text-inverse-secondary">
               <p className="mb-1">
-                <span className="text-text-inverse">VyaparPool orchestrates the commerce workflow.</span>
+                <span className="text-text-inverse">B2Beat orchestrates the commerce workflow.</span>
               </p>
               <p>Regulated financial functions remain with licensed partners.</p>
             </div>
@@ -120,7 +120,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border-dark flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[0.8rem] text-text-inverse-secondary">
-            © {new Date().getFullYear()} VyaparPool. All rights reserved.
+            © {new Date().getFullYear()} B2Beat. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-[0.8rem] text-text-inverse-secondary">
             <span className="inline-flex items-center gap-2">
@@ -134,3 +134,4 @@ export default function Footer() {
     </footer>
   );
 }
+
