@@ -258,22 +258,22 @@ export default function PoolSimulator({
           <span className="text-[0.75rem] text-text-tertiary tabular">Simulated</span>
         </div>
 
-        <div className="max-h-[340px] overflow-y-auto pr-1 divide-y divide-slate-100">
-          <div className="flex items-center justify-between px-3 py-3">
-            <span className="text-slate-500 text-sm font-medium">T+0 Upfront Cash Required</span>
-            <span className="bg-emerald-50 text-emerald-600 px-2.5 py-0.5 rounded-full font-bold text-xs border border-emerald-200">₹0</span>
+        <div className="max-h-[340px] overflow-y-auto pr-1">
+          <div className="flex flex-row justify-between items-start gap-4 py-3 border-b border-slate-100">
+            <span className="text-slate-500 text-sm font-medium flex-1">T+0 Upfront Cash Required</span>
+            <span className="bg-emerald-50 text-emerald-600 px-2.5 py-0.5 rounded-full font-bold text-xs border border-emerald-200 shrink-0">₹0</span>
           </div>
-          <div className="flex items-center justify-between px-3 py-3">
-            <span className="text-slate-500 text-sm font-medium">NBFC Disbursal to Distributor</span>
-            <span className="text-slate-900 font-semibold text-sm tabular">₹8,190</span>
+          <div className="flex flex-row justify-between items-start gap-4 py-3 border-b border-slate-100">
+            <span className="text-slate-500 text-sm font-medium flex-1">NBFC Disbursal to Distributor</span>
+            <span className="text-slate-900 font-semibold text-sm text-right shrink-0 tabular">₹8,190</span>
           </div>
-          <div className="flex items-center justify-between px-3 py-3">
-            <span className="text-slate-500 text-sm font-medium">Daily Paytm QR Micro-Sweep</span>
-            <span className="text-cyan-600 font-semibold text-sm tabular">Est. 15% of daily sales</span>
+          <div className="flex flex-row justify-between items-start gap-4 py-3 border-b border-slate-100">
+            <span className="text-slate-500 text-sm font-medium flex-1">Daily Paytm QR Micro-Sweep</span>
+            <span className="text-cyan-600 font-semibold text-sm text-right shrink-0">Est. 15% of daily sales</span>
           </div>
-          <div className="flex items-center justify-between px-3 py-3">
-            <span className="text-slate-500 text-sm font-medium">Day-14 UPI AutoPay Floor</span>
-            <span className="text-slate-900 font-semibold text-sm tabular">Residual Balance</span>
+          <div className="flex flex-row justify-between items-start gap-4 py-3">
+            <span className="text-slate-500 text-sm font-medium flex-1">Day-14 UPI AutoPay Floor</span>
+            <span className="text-slate-900 font-semibold text-sm text-right shrink-0">Residual Balance</span>
           </div>
         </div>
 
